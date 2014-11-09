@@ -11,7 +11,8 @@
 module.exports = (robot) ->
 
   robot.respond /HELLO$/i, (msg) ->
-      robot.messageRoom '#magarine', 'hello there'
+    msg.send 'hello there'
+
   # robot.hear /badger/i, (msg) ->
   #   msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
