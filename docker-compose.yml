@@ -1,0 +1,5 @@
+hubot:
+  build: .
+  ports:
+    - "8080:8080"
+  env_file: ~/.doraemon.env
