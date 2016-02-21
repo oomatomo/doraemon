@@ -24,6 +24,8 @@ COPY package.json ./
 RUN npm install
 
 COPY ./bin/hubot ./bin/hubot
+COPY hubot-scripts.json ./
+COPY external-scripts.json ./
 COPY ./scripts ./scripts
 
 EXPOSE 8080
