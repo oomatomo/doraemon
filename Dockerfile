@@ -28,5 +28,4 @@ COPY hubot-scripts.json ./
 COPY external-scripts.json ./
 COPY ./scripts ./scripts
 
-EXPOSE 8080
 CMD ["bin/hubot", "-a", "slack", "-n", "doraemon"]
