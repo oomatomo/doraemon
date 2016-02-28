@@ -31,7 +31,7 @@ module.exports = (robot) ->
       "body": body
     }
     github.post url + "/releases", data, (response) ->
-      res.send "created pull request"
+      res.send "created new release"
       res.send "tag_name: " + new_tag
       res.send "url: " + response.html_url
 
@@ -62,7 +62,7 @@ module.exports = (robot) ->
         # pull requestでのマージを取得する
         for commit in response.commits
           # Merge pull request #1 from branch
-          match = commit.commit.message.match(/Merge pull request (#\d)/)
+          match = commit.commit.message.match(/Merge pull request (#\d+)/)
           if ! match
             continue
           body += match[1] + "\n"
